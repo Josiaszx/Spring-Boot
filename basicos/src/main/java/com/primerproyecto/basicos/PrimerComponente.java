@@ -7,6 +7,6 @@ import org.springframework.stereotype.Component;
 public class PrimerComponente {
 
     public String saludo() {
-        return "Hola Mundo desde PrimerComponente";
+        return "Hola Mundo desde la clase PrimerComponente";
     }
 }

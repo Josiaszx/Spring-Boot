@@ -7,14 +7,14 @@ La anotación `@Values` nos permite obtener valores de archivos de propiedades d
 Si tenemos en nuestro archivo `application.properties`:
 
 ```
-custom.propertie=HOLA
+custom.propertie=HOLAA
 ```
 
 Dentro de las clases del proyecto podemos obtener sus propiedades con:
 
 ```java
 @Value("custom.propertie") // obtendra el valor de la clave dada y lo guardara en la variable siguiente
-String propiedad; // propiedad = "HOLA"
+String propiedad; // propiedad = "HOLAA"
 ```
 
 ## Obtener valores desde otro archivos de propiedades
