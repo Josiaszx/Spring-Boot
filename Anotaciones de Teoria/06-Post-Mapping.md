@@ -31,7 +31,7 @@ Usuario creado correctamente.
 
 Con la anotación `@RequestBody`, le decimos a spring que el cuerpo o body de la petición debe tener un formato especifico, dicho formato debe poder convertirse en una instancia de un objeto dado. 
 
-Con esto, lo que hara @RequestBody sera deserializar el body de la petición y convertirlo en un objeto de Java.
+Con esto, lo que hara `@RequestBody` sera deserializar el body de la petición y convertirlo en un objeto de Java.
 
 Para esto agregamos la anotación como parámetro en nuestro método junto con un objeto del tipo de dato cuyos parámetros requiramos deserializar del body de la petición.
 
@@ -43,7 +43,7 @@ public class UsuarioController {
 
 		@PostMapping("/user")
     public String nuevaPersona(
-				    // el archivo resibido por el servidor debe de tener las propiedades de la clase Persona
+            // el archivo resibido por el servidor debe de tener las propiedades de la clase Persona
             @RequestBody Persona persona
             // spring tomara los parametros del body de la solictud e interara crear un objeto tipo Persona apartir de dichos parametros
     ) {

@@ -17,7 +17,7 @@ public class MyFirstController {
 }
 ```
 
-Esto simplemente nos devolverá un Hola mundo impreso en la pagina cuando se ingrese a la dirección `/home`, si queremos devolver un JSON como respuesta, podemos definir un objeto tipo `Map` donde cargaremos la información y luego retronamos dicho map.
+Esto simplemente nos devolverá un Hola mundo impreso en la pagina cuando se ingrese a la dirección `/home`, si queremos devolver un JSON como respuesta, podemos definir un objeto tipo `Map` donde cargaremos la información y luego retornamos dicho map.
 
 ```java
 import org.springframework.stereotype.RestController;

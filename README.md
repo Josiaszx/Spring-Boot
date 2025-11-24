@@ -59,12 +59,29 @@ Para crear una plantilla de aplicación con spring boot podemos usar SpringIniti
                 @PathVariable: <a href="Anotaciones%20de%20Teoria/07-Path-Variable.md">07-Path-Variable</a>
             </li>
             <li>
-                @RequestParam: <a href="Anotaciones%20de%20Teoria/08-Request-Param.md">08-Request-Parama</a>
+                @RequestParam: <a href="Anotaciones%20de%20Teoria/08-Request-Param.md">08-Request-Param</a>
             </li>
             <li>Codigo:
-                <a href="REST-basics/src/main/java/com/rest/restbasics/FirstController.java">Implementacion</a>
+                <a href="REST-basics/src/main/java/com/rest/restbasics/FirstController.java">Implementación</a>
+            </li>
+        </ul>
+    <li>
+        Spring Data JPA + anotaciones relacionadas
+        <ul>
+            <li>
+                Teoria: <a href="Anotaciones%20de%20Teoria/09-JPA-&-Hibernate.md">09-JPA-&-Hibernate</a>
+            </li>
+            <li>
+                @Entity: <a href="Anotaciones%20de%20Teoria/10-Entidades.md">10-Entidades</a>
+            </li>
+            <li>
+                Repositorios: <a href="Anotaciones%20de%20Teoria/11-Repositorios.md">11-Repositorios</a>
+            </li>
+            <li>Codigo:
+                <a href="JPA/src/main/java/com/springjpa/jpa">Implementacion</a>
             </li>
         </ul>
     </li>
+    
     
 </ol>

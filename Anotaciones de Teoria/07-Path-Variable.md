@@ -61,7 +61,7 @@ Esto nos mostrara:
 
 `Usuario con ID: 15 - Juan`
 
-💬 Tambien podemos identificar variables agregando entre paréntesis a @PathVariable el nombre especifico de la variable en el endpoint.
+💬 Tambien podemos identificar variables agregando entre paréntesis a `@PathVariable` el nombre especifico de la variable en el endpoint.
 
 **Ejemplo:**
 
