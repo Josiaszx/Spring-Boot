@@ -14,7 +14,7 @@ JPA NO es una implementación, es solo una especificación (interfaz) que define
 
 ## Conectar BD con proyecto
 
-Para conectar una base de datos con nuestro proyecto de spring, primeros debemos tener descargadas las dependencias de JPA y el driver del motor de base de datos que estemos utilizando. Esto podemos hacerlo al crear el proyecto en Initilizr o agregando las siguientes dependencias en el `pom.xml`
+Para conectar una base de datos con nuestro proyecto de spring, primero debemos tener descargadas las dependencias de JPA y el driver del motor de base de datos que estemos utilizando. Esto podemos hacerlo al crear el proyecto en Initilizr o agregando las siguientes dependencias en el `pom.xml`
 
 Para agregar dependencias de JPA:
 
@@ -62,7 +62,7 @@ spring:
   
   datasource:
     url: jdbc:mysql://localhost:3306/demo_db
-    username: root
-    password: 2005jamo
+    username: usuario_de_bd
+    password: contreseña_de_bd
     driver-class-name: com.mysql.cj.jdbc.Driver
 ```

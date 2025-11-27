@@ -1,5 +1,7 @@
 package com.springjpa.jpa;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 // La clase estudiante representará una fila de una tabla en nuestra base de datos
@@ -32,7 +34,42 @@ public class Estudiante {
         this.email = email;
     }
 
+    // realaciones entre entidades
+
+
+    // @OneToOne --> indica a spring que Estudiante tiene una relacion 1-1 con PerfilEstudiante
+    @OneToOne(
+            mappedBy = "estudiante", // mappedBy hace referencia al nombre de la instancia de Estudiante en la clase PerfilEstudiante
+            cascade = CascadeType.ALL  // indica que si se borra un Estudiante tambien se borra su perfil asociado
+    )
+    @JsonManagedReference // Instructiva para deserializar el perfil del estudiante
+    private PerfilEstudinte perfil; // representacion del perfil corresponde a un estudiante
+
+
+
+    // @ManyToOne --> estudiante tiene una relacion con colegio de n-1
+    @ManyToOne
+    // @JoinColumn --> añade una nueva columna como clave foranea
+    @JoinColumn(
+            name = "colegio_id"
+    )
+    @JsonBackReference // instructiva para no deserializar el objeto colegio (prevenir recursion infinita en el JSON)
+    private Colegio colegio; // representacion del colegio al que pertenece un estudiante
+
+
+
+
+    // constuctores, getters y setters
+
     public Estudiante() {}
+
+    public Colegio getColegio() {
+        return colegio;
+    }
+
+    public void setColegio(Colegio colegio) {
+        this.colegio = colegio;
+    }
 
     public Integer getId() {
         return id;
