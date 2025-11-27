@@ -43,7 +43,7 @@ Luego tenemos que configurar la conexión a la base de datos, esto lo hacemos en
 #definimos la dirección de nuestra base de datos
 spring.datasource.url=jdbc:mysql://localhost:3306
 
-# usuario de bd
+# usuarioServices de bd
 spring.datasource.username=usuario_de_bd
 
 # contraseña de bd

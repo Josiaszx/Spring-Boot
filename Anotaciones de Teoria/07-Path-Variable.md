@@ -67,9 +67,9 @@ Esto nos mostrara:
 
 ```java
     @GetMapping("/usuarios/{nombre}")
-    public String usuario(
+    public String usuarioServices(
 				@PathVariable("nombre") String nombre
 	   ){
-        return "El usuario es: "+nombre;
+        return "El usuarioServices es: "+nombre;
     }
 ```

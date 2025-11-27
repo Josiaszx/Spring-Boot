@@ -8,7 +8,7 @@ La anotación `@PostMapping` nos permite definir métodos para manejar peticione
 @RestController // la clase deber estar definida como un controlador rest
 public class UsuarioController {
 
-		@PostMapping("/usuario")
+		@PostMapping("/usuarioServices")
     public String crearUsuario() {
         return "Usuario creado correctamente.";
     }
@@ -18,7 +18,7 @@ public class UsuarioController {
 Ahora, si hacemos una petición con el método POST al siguiente endpoint
 
 ```yaml
-http://localhost:8080/usuario
+http://localhost:8080/usuarioServices
 ```
 
 Si todo sale bien, el servidor recibirá la información y retornara 200 - OK con el siguiente mensaje: 

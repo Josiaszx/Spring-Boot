@@ -77,6 +77,12 @@ Para crear una plantilla de aplicación con spring boot podemos usar SpringIniti
             <li>
                 Repositorios: <a href="Anotaciones%20de%20Teoria/11-Repositorios.md">11-Repositorios</a>
             </li>
+            <li>
+                Relaciones entre entidades: <a href="Anotaciones%20de%20Teoria/12-Relaciones-entre-entidades.md">12-Relaciones-entre-entidades</a>
+            </li>
+            <li>
+                DTOs: <a href="Anotaciones%20de%20Teoria/13-DTOs.md">13-DTOs</a>
+            </li>
             <li>Codigo:
                 <a href="JPA/src/main/java/com/springjpa/jpa">Implementacion</a>
             </li>
