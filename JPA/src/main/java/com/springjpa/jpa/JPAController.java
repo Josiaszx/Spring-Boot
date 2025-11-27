@@ -37,13 +37,13 @@ public class JPAController {
     }
 
     // obtener todos los estudiantes segun su nombre
-    @GetMapping("/estudiantes/buscar/nombre/{nombre}")
+    @GetMapping("/estudiantes/nombre/{nombre}")
     public List<Estudiante> getEstudiantesByName(@PathVariable String nombre){
         return estudianteRepository.findAllByNombre(nombre);
     }
 
     // obtener todos los estudiantes segun su nombre
-    @GetMapping("/estudiantes/buscar/apellido/{apellido}")
+    @GetMapping("/estudiantes/apellido/{apellido}")
     public List<Estudiante> getEstudiantesByApellido(@PathVariable String apellido){
         return estudianteRepository.findAllByApellido(apellido);
     }
