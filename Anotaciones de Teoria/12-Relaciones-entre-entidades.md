@@ -9,7 +9,7 @@ Las relaciones pueden ser:
 
 ⚠️ En el caso de que la relación sea bidireccional y trabajemos con APIs REST, al querer serializar las entidades se formara un bucle infinito en le JSON (esto porque tenemos instancias de sus relaciones en ambas clases), para evitar eso podemos utilizar DTOs o agregar las anotaciones `@JsonMangedReference` (define la clase “principal o padre”) y `@JsonBackReference` (define la clase “secundaria o dependiente” y evita la serialización de la referencia de la clase padre).
 
-# Relación 1:1 (uno a uno)
+## Relación 1:1 (uno a uno)
 
 ### Relación bidireccional
 

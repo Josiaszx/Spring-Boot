@@ -1,18 +1,18 @@
-package com.proyecto.organizacion.DTO;
+package com.testing.testing;
 
-public class UsuarioDTO extends ComprasDTO {
+public class UsuarioDTO {
 
     private String nombre;
     private String apellido;
     private String email;
 
+    public UsuarioDTO() {
+    }
+
     public UsuarioDTO(String nombre, String apellido, String email) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
-    }
-
-    public UsuarioDTO() {
     }
 
     public String getNombre() {
