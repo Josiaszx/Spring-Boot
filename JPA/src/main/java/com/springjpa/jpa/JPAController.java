@@ -55,4 +55,17 @@ public class JPAController {
         estudianteRepository.deleteById(id);
     }
 
+    @GetMapping("/estudiantes/{id}/clases")
+    public List<Clase> findClasesById(@PathVariable Integer id){
+        var estudiante = estudianteRepository.findById(id).orElse(new Estudiante());
+        return estudiante.getClases();
+    }
+
+    @PostMapping("/estudiantes/{id}/clases")
+    public Estudiante save(@PathVariable Integer id, @RequestBody Clase clase){
+        var estudiante = estudianteRepository.findById(id).orElse(new Estudiante());
+        estudiante.getClases().add(clase);
+        estudianteRepository.save(estudiante);
+        return estudiante;
+    }
 }

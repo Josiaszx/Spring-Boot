@@ -1,8 +1,11 @@
 package com.springjpa.jpa;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 // La clase estudiante representará una fila de una tabla en nuestra base de datos
 @Entity // definimos a la clase como una entidad
@@ -57,6 +60,10 @@ public class Estudiante {
     private Colegio colegio; // representacion del colegio al que pertenece un estudiante
 
 
+    // @ManyToMany --> Estudiante tiene una relacion con Clase de n:n (muchos a muchos)
+    @ManyToMany(mappedBy = "estudiantes") // se agrega el mapeo en la clase "principal"
+    @JsonIgnore
+    List<Clase> clases;
 
 
     // constuctores, getters y setters
@@ -101,6 +108,23 @@ public class Estudiante {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+
+    public PerfilEstudinte getPerfil() {
+        return perfil;
+    }
+
+    public void setPerfil(PerfilEstudinte perfil) {
+        this.perfil = perfil;
+    }
+
+    public List<Clase> getClases() {
+        return clases;
+    }
+
+    public void setClases(List<Clase> clases) {
+        this.clases = clases;
     }
 
     @Override

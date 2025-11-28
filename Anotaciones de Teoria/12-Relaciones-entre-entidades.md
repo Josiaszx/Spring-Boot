@@ -147,3 +147,41 @@ Public Class Colegio {
 	// ... getters y setters
 }
 ```
+## Relación n:n (muchos a muchos)
+
+Si tenemos las clases Estudiante y Materias
+
+**En Estudiantes:**
+
+```java
+@Entity
+public class Estudiante {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String nombre;
+    
+    @ManyToMany()
+    @JoinTable( // crea la tabla de apoyo para la relacion
+        name = "estudiante_curso", // nombre de la tabla de apoyo
+        joinColumns = @JoinColumn(name = "estudiante_id"), // columna de IDs de estudiantes
+        inverseJoinColumns = @JoinColumn(name = "materia_id") // columna de IDs de materias
+    )
+    private Set<Materia> materias = new HashSet<>();
+}
+```
+
+**En Materia:**
+
+```java
+@Entity
+public class Materia {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String nombre;
+    
+    @ManyToMany(mappedBy = "materias")
+    private Set<Estudiante> estudiantes = new HashSet<>();
+}
+```
