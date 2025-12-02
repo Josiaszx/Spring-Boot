@@ -1,6 +1,9 @@
 package com.springjpa.jpa;
 
+import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
@@ -20,4 +23,11 @@ public interface EstudianteRepository extends JpaRepository<Estudiante, Integer>
     List<Estudiante> findAllByApellido(String apellido);
 
     // el metodo es implementado por spring automáticamente
+
+
+    // Generar query
+    @Modifying // indicamos que queremos modificar la tabla
+    @Transactional
+    @Query("update Estudiante e set e.nombre = 'Juan' where  e.id = :id")
+    void updateNombre(int id);
 }
