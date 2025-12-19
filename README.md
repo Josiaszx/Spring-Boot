@@ -96,5 +96,4 @@ Para crear una plantilla de aplicación con spring boot podemos usar SpringIniti
             <li>Codigo: <a href="testing/src/test/java/com/testing/testing">Implementacion</a></li>
         </ul>
     </li>
-    
 </ol>
