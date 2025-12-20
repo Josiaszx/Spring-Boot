@@ -2,6 +2,7 @@ package com.ss.springsecurity;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -36,5 +37,10 @@ public class HelloController {
     @GetMapping("/csrf")
     public CsrfToken getCsrf(HttpServletRequest request) {
         return (CsrfToken) request.getAttribute("_csrf");
+    }
+
+    @GetMapping("/redirect")
+    public String redirect() {
+        return "PAGINA DE REDIRECCION AL AUTENTICARSE";
     }
 }
