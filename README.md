@@ -1,6 +1,6 @@
 # Spring Boot desde cero
-## Introduccion
-Framework de código abierto de Java que nos permite crear aplicaciones autónomas. Acelera y simplifica el desarrollo de microservicios y aplicaciones web con Spring.
+
+Spring Boot es un modulo de Spring Framework, de código abierto basado en Java que nos permite crear aplicaciones autónomas acelerando y simplificando el desarrollo de microservicios y aplicaciones web.
 
 Para crear una plantilla de aplicación con spring boot podemos usar SpringInitializr.
 
@@ -8,6 +8,10 @@ Para crear una plantilla de aplicación con spring boot podemos usar SpringIniti
 ⚙️ [Guia SpringInitilizr](Anotaciones%20de%20Teoria/SpringInitializr_Guía.md) |
 ⬆️ [Desplegar Proyecto Desde Consola](Anotaciones%20de%20Teoria/Desplegar-Proyecto-Desde-CMD.md) |
 📂 [Organizacion de Proyectos](Anotaciones%20de%20Teoria/14-Organización-de-Proyectos.md)
+
+## ✅ Finalidad
+Este repositorio tiene la finalidad de guardar notas, apuntes e implementacion en codigo en Spring Boot a medida que voy avanzando y aprendiendo sobre la herramienta.
+El contenido esta enfocado mayormente al desarrollo de APIs REST implementando tambien otras tecnologias basadas tambien en Spring como Spring Data JPA y Spring Security. 
 
 ## 📗 Indice de temas
 
@@ -18,9 +22,10 @@ Para crear una plantilla de aplicación con spring boot podemos usar SpringIniti
 5. [Spring data JPA](#spring-data-jpa)
 6. [Testing unitario con JUnit y Mockito](#testing-unitario-con-junit-y-mockito)
 7. [Spring Security](#spring-security)
-8. [Extras y complementos](#extras-y-complementos)
+8. [Manejo de exepciones](#manejo-de-exepciones)
+9. [Extras y complementos](#extras-y-complementos)
 
-## Temas
+## 📗 Temas
 ### Inyeccion de dependencias
 - [Teoria](Anotaciones%20de%20Teoria/01-Inyección-de-Dependencias.md)
 - [Implemetacion](basicos/src/main/java/com/primerproyecto/basicos)
@@ -60,6 +65,10 @@ Para crear una plantilla de aplicación con spring boot podemos usar SpringIniti
 ### Spring Security
 - [Security filter chain](Anotaciones%20de%20Teoria/17-Security-Filter-Chain.md)
 - [Implementacion](spring-profiles/src/main/java/com/profiles/springprofiles)
+
+### Manejo de exepciones
+- [Teoria](Anotaciones%20de%20Teoria/18-Manejo-de-Exepciones.md)
+- [Implementacion](manejo-de-errores/src/main/java/com/exepciones/manejodeerrores)
 
 ### Extras y complementos
 - [REST teoria](Anotaciones%20de%20Teoria/REST.md)
