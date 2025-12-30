@@ -1,8 +1,9 @@
-package com.ss.springsecurity;
+package com.ss.springsecurity.controller;
 
+import com.ss.springsecurity.entity.User;
+import com.ss.springsecurity.service.UserServices;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class HelloController {
+public class UserController {
 
     @GetMapping("/")
     public String index(HttpServletRequest request) {
@@ -23,8 +24,27 @@ public class HelloController {
     private UserServices services;
 
 
-    @GetMapping("/usuarios")
+    // endpoint accesible sin autenticacion
+    @GetMapping("/public/usuarios")
     public List<User> getUsuarios() {
+        return services.getUsuarios();
+    }
+
+    // endpoint accesible solo con autenticacion
+    @GetMapping("/auth/usuarios")
+    public List<User> getUsuariosWithAuthentication() {
+        return services.getUsuarios();
+    }
+
+    // endpoint accesible solo con autorizacion READ
+    @GetMapping("/auth/usuarios/read")
+    public List<User> getUsuariosWithReadAuthorization() {
+        return services.getUsuarios();
+    }
+
+    // endpoint accesible solo con autorizacion ADMIN
+    @GetMapping("/auth/usuarios/adimn")
+    public List<User> getUsuariosWithAdminAuthorization() {
         return services.getUsuarios();
     }
 

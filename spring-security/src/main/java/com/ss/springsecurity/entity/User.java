@@ -1,15 +1,20 @@
-package com.ss.springsecurity;
+package com.ss.springsecurity.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 
 @Entity
 public class User {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nombre;
+
+    @Column(unique = true, nullable = false)
+    @Email
     private String email;
+
     private String password;
 
     public User() {}
@@ -19,6 +24,14 @@ public class User {
         this.nombre = nombre;
         this.email = email;
         this.password = password;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getEmail() {
