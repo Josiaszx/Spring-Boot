@@ -43,7 +43,7 @@ Algunos filtros básicos que se pueden implementar son:
 .authorizeHttpRequests(auth -> auth.anyRequest().authenticated())
 
 // permitir acceso a un endpoint sin la necesidad de autenticacion
-.authorizeHttpRequests(auth -> auth.requestMatchers("/usuarios"))
+.authorizeHttpRequests(auth -> auth.requestMatchers("/usuarios").permitAll())
 // el metodo requestMatchers() tambien puede recibir una lista de endpoints
 
 // requerir autenticacion y permitir acceso a endpoints en una sola funcion
