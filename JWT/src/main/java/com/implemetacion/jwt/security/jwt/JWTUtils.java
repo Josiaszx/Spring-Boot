@@ -1,4 +1,4 @@
-package com.implemetacion.jwt.security;
+package com.implemetacion.jwt.security.jwt;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
@@ -12,6 +12,11 @@ import org.springframework.stereotype.Service;
 import javax.crypto.SecretKey;
 import java.security.Key;
 import java.util.Date;
+
+
+/*
+    Esta clase representa un servicio que contiene varios metodos utiles para trabajar con tokens JWT.
+*/
 
 @Service
 @RequiredArgsConstructor

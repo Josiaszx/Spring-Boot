@@ -24,13 +24,13 @@ public class Role {
 
     // Roles que seran manejados dentro de la app
     @Transient
-    final static String USER = "USER";
+    final static String USER = "ROLE_USER";
 
     @Transient
-    final static String ADMIN = "ADMIN";
+    final static String ADMIN = "ROLE_ADMIN";
 
     @Transient
-    final static String GUEST = "GUEST";
+    final static String GUEST = "ROLE_GUEST";
 
     
 }

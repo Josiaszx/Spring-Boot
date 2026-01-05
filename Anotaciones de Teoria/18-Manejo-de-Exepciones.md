@@ -1,4 +1,4 @@
-La anotación `@RestControllerAdvice` nos permite definir una clase como clase para manejo de errores, esto para no tener que estar agregando un try-catch en cada handler de cada controlador. Para esto agregamos la notation `@RestControllerAdvice` antes de la clase.
+La anotación `@RestControllerAdvice` nos permite definir una clase como clase para manejo de errores, esto para no tener que estar agregando un try-catch controlador o servicio. Para esto agregamos la notation `@RestControllerAdvice` antes de la clase.
 
 Tambien utilizaremos la anotación `@ExceptionHandler` para definir cada método para los tipos de errores que queremos manejar.
 
@@ -29,3 +29,5 @@ public class GlobalExceptionHandler {
 ```
 
 - `ResponseEntity` → Clase que representa toda la respuesta HTTP recibida, la utilizamos para devolver y mostrar los errores.
+
+💬 Las clases definidas para manejo de errores con `@RestControllerAdvice` funicionan solo dentro del contexto del DispatcherServlet.

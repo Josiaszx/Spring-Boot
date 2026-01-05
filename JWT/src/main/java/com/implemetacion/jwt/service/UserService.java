@@ -22,7 +22,11 @@ public class UserService {
 
     // agregar usuario
     public ResponseEntity<Map<String, Object>> save(UserEntity user) {
+        var encodedPassword = passwordEncoder.encode(user.getPassword());
+        user.setPassword(encodedPassword);
+
         user = userRepository.save(user);
+
         var response = new HashMap<String, Object>();
         response.put("nombre de usuario", user.getFirstName() + user.getLastName());
         response.put("email", user.getEmail());
