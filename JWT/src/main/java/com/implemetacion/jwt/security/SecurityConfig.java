@@ -28,7 +28,7 @@ import tools.jackson.databind.json.JsonMapper;
 @AllArgsConstructor
 public class SecurityConfig {
 
-    private final JsonMapper.Builder builder;
+
     // las dependecias necesarias seran inyectadas autamaticamente por Spring gracias al @AllArgsConstructor
     private JwtAuthenticationFilter jwtAuthenticationFilter;
     private AuthEntryPointJwt unauthorizedRequestsExceptionHandler;

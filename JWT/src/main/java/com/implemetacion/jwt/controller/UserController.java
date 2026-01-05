@@ -1,7 +1,9 @@
 package com.implemetacion.jwt.controller;
 
+import com.implemetacion.jwt.model.dto.PostUserDto;
 import com.implemetacion.jwt.service.UserService;
 import com.implemetacion.jwt.model.UserEntity;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +20,7 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping
-    public ResponseEntity<Map<String, Object>> save(@RequestBody UserEntity user) {
+    public ResponseEntity<Map<String, Object>> save(@Valid @RequestBody PostUserDto user) {
         return userService.save(user);
     }
 

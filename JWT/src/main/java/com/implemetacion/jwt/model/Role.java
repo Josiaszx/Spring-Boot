@@ -32,5 +32,7 @@ public class Role {
     @Transient
     final static String GUEST = "ROLE_GUEST";
 
-    
+    public Role(String role) {
+        this.role = role;
+    }
 }

@@ -1,5 +1,6 @@
 package com.implemetacion.jwt.model;
 
+import com.implemetacion.jwt.model.dto.PostUserDto;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -34,25 +35,16 @@ public class UserEntity {
     private Long id;
 
     @Column(length = 50, name = "nombre", nullable = false)
-    @NotNull(message = "El nombre no puede ser nulo")
-    @NotBlank(message = "El nombre no puede estar vacio")
     private String firstName;
 
     @Column(length = 50, name = "apellido", nullable = false)
-    @NotNull(message = "El apellido no puede ser nulo")
-    @NotBlank(message = "El apellido no puede estar vacio")
     private String lastName;
 
     @Column(unique = true, nullable = false, name = "email")
-    @NotNull(message = "El email no puede ser nulo")
-    @NotBlank(message = "El email no puede estar vacio")
-    @Email(message = "El email debe ser valido")
     private String email;
 
 
     @Column(nullable = false, name = "password")
-    @NotNull(message = "la contraseña no puede ser nula")
-    @NotBlank(message = "la contraseña no puede ser nula")
     private String password;
 
     @Column(name = "created_at", updatable = false)
@@ -63,9 +55,18 @@ public class UserEntity {
     @LastModifiedDate
     private LocalDate lastUpdatedAt;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "rol_id")
     private Role rolDeUsuario;
 
+    public UserEntity(PostUserDto userDto, Role rolDeUsuario) {
+        this.firstName = userDto.getFirstName();
+        this.lastName = userDto.getLastName();
+        this.rolDeUsuario = rolDeUsuario;
+        this.email = userDto.getEmail();
+        this.password = userDto.getPassword();
+        this.createdAt = LocalDate.now();
+        this.lastUpdatedAt = LocalDate.now();
+    }
 
 }

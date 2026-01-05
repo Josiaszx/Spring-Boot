@@ -1,3 +1,4 @@
+# Manejo de excepciones
 La anotación `@RestControllerAdvice` nos permite definir una clase como clase para manejo de errores, esto para no tener que estar agregando un try-catch controlador o servicio. Para esto agregamos la notation `@RestControllerAdvice` antes de la clase.
 
 Tambien utilizaremos la anotación `@ExceptionHandler` para definir cada método para los tipos de errores que queremos manejar.
