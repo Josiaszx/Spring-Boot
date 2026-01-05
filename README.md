@@ -23,7 +23,7 @@ El contenido esta enfocado mayormente al desarrollo de APIs REST implementando t
 6. [Testing unitario con JUnit y Mockito](#testing-unitario-con-junit-y-mockito)
 7. [Spring Security](#spring-security)
 8. [Manejo de exepciones](#manejo-de-exepciones)
-9. [Autenticacion con JWT](#9-autenticacion-con-jwt)
+9. [Autenticacion y autorizacion con JWT](#9-autenticacion-con-jwt)
 10. [Extras y complementos](#extras-y-complementos)
 
 ## 📗 Temas
@@ -55,7 +55,7 @@ El contenido esta enfocado mayormente al desarrollo de APIs REST implementando t
 - [DTOs](Anotaciones%20de%20Teoria/13-DTOs.md)
 - [Implemetacion](JPA/src/main/java/com/springjpa/jpa)
 
-### 6. Testing Unitario con JUnit y Mockito
+### 6. Testing unitario con JUnit y Mockito
 - [Teoria](Anotaciones%20de%20Teoria/15-Testing.md)
 - [Implemetacion](testing/src/test/java/com/testing/testing)
 
@@ -68,8 +68,9 @@ El contenido esta enfocado mayormente al desarrollo de APIs REST implementando t
 - [Teoria](Anotaciones%20de%20Teoria/18-Manejo-de-Exepciones.md)
 - [Implementacion](manejo-de-errores/src/main/java/com/exepciones/manejodeerrores)
 
-### 9. Autenticacion con JWT
-- [Teoria](./Anotaciones%20de%20Teoria/20-Implementacion-JWT.md)
+### 9. Autenticacion y autorizacion con JWT
+- [Autenticacion](./Anotaciones%20de%20Teoria/20-Implementacion-JWT.md)
+- [Autorizacion](./Anotaciones%20de%20Teoria/21-Autorizacion-con-JWT.md)
 - [Codigo](./JWT/src/main/java/com/implemetacion/jwt)
 
 ### Extras y complementos

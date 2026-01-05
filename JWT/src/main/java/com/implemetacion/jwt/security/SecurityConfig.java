@@ -39,9 +39,11 @@ public class SecurityConfig {
         return http
                 .csrf(AbstractHttpConfigurer::disable) // desactivamos el filtro csrf
 
-                // definimos las rutas que no requieren autenticacion
+                // configuramos las reglas de autorizacion de las solicitudes HTTP
                 .authorizeHttpRequests(auth -> {
                     auth.requestMatchers("/api/auth/signin").permitAll(); // la ruta /api/auth/signin es publica
+                    auth.requestMatchers(HttpMethod.GET, "/api/authorization/admin").hasRole("ADMIN"); // la ruta /api/authorization/ es solo accesible para usuarios con el rol ROLE_ADMIN
+                    auth.requestMatchers(HttpMethod.GET, "/api/authorization/user").hasAnyRole("ADMIN", "USER"); // la ruta /api/users es solo accesible para usuarios con el rol ROLE_ADMIN o ROLE_USER
                     auth.anyRequest().authenticated();
                 })
 

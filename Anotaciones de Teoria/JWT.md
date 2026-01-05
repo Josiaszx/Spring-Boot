@@ -1,12 +1,12 @@
 # JWT
 
-JWT es un estándar abierto (RFC 7519) que define una forma compacta y autónoma de transmitir información de forma segura entre dos partes como un objeto JSON. Esta información puede ser verificada y confiable porque está firmada digitalmente.
+JWT (JSON Web Token) es un estándar abierto (RFC 7519) que define una forma compacta y autónoma de transmitir información de forma segura entre dos partes como un objeto JSON. Esta información puede ser verificada y confiable porque está firmada digitalmente.
 
 ## Estructura de un JWT
 
 Un JWT consta de tres partes separadas por puntos, cada parte representa información acerca del usuario codificada en base 64.
 
-```java
+```
 xxxxx.yyyyy.zzzzz
 // partes: header.payload.signature
 ```
@@ -39,7 +39,7 @@ xxxxx.yyyyy.zzzzz
     - Una clave secreta
     - Algoritmo especificado en el header
     
-    ```json
+    ```
     // ejemplo decodificado
     HMACSHA256(
       base64UrlEncode(header) + "." +

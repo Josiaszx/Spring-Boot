@@ -2,10 +2,12 @@ package com.implemetacion.jwt.security.implementations;
 
 
 import com.implemetacion.jwt.model.UserEntity;
+import io.jsonwebtoken.lang.Collections;
 import org.jspecify.annotations.Nullable;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -39,7 +41,8 @@ public class UserDetailsImpl implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of();
+        GrantedAuthority grantedAuthority = () -> user.getRolDeUsuario().getRole();
+        return List.of(grantedAuthority);
     }
 
     @Override
