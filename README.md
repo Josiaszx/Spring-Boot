@@ -20,7 +20,7 @@ El contenido esta enfocado mayormente al desarrollo de APIs REST implementando t
 3. [Sping profiles](#3-spring-profiles)
 4. [REST](#4-rest-con-spring-boot)
 5. [Spring data JPA](#5-spring-data-jpa)
-6. [Testing unitario con JUnit y Mockito](#6-testing-unitario-con-junit-y-mockito)
+6. [Testing](#6-testing)
 7. [Spring Security](#7-spring-security)
 8. [Manejo de exepciones](#8-manejo-de-exepciones)
 9. [Autenticacion y autorizacion con JWT](#9-autenticacion-y-autorizacion-con-jwt)
@@ -55,9 +55,9 @@ El contenido esta enfocado mayormente al desarrollo de APIs REST implementando t
 - [DTOs](Anotaciones%20de%20Teoria/13-DTOs.md)
 - [Implemetacion](JPA/src/main/java/com/springjpa/jpa)
 
-### 6. Testing unitario con JUnit y Mockito
-- [Teoria](Anotaciones%20de%20Teoria/15-Testing.md)
-- [Implemetacion](testing/src/test/java/com/testing/testing)
+### 6. Testing
+- **Testing unitario con JUnit y Mockito:** [Teoria](Anotaciones%20de%20Teoria/15-Testing.md) | [Implemetacion](testing/src/test/java/com/testing/testing)
+- **Testing de integracion y end-to-end:** [Teoria](./Anotaciones%20de%20Teoria/23-Tests-de-Integracion-y-End-to-End.md) | [Implementacion](testing/src/test/java/com/testing/testing)
 
 ### 7. Spring Security
 - [Security filter chain](Anotaciones%20de%20Teoria/17-Security-Filter-Chain.md)
