@@ -2,6 +2,8 @@
 
 Un WebSocket es un protocolo de comunicación que permite una conexión persistente y bidireccional entre cliente y servidor a través de una sola conexión TCP, a diferencia de HTTP donde se hace una solicitud donde el servidor devuelve una respuesta y la conexión se termina.
 
+Implementacion básica de WebSockets con Spring Boot: [springboot-websockets](https://github.com/Josiaszx/springboot-websockets)
+
 **Con HTTP:**
 
 1. El cliente envía una petición.
