@@ -79,4 +79,5 @@ El contenido esta enfocado mayormente al desarrollo de APIs REST implementando t
 - [HTTP teoria](Anotaciones%20de%20Teoria/HTTP.md)
 - [JWT teoria](./Anotaciones%20de%20Teoria/JWT.md)
 - [WebSockets](Anotaciones%20de%20Teoria/24-WebSockets.md)
+- [OpenAPI](https://github.com/Josiaszx/openapi-springboot)
 - [Paginacion de respuestas](Anotaciones%20de%20Teoria/16-Paginación-de-respuestas.md)
